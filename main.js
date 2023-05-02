@@ -21,9 +21,9 @@ const WIN_MUSIC = new Audio("./src/WIN.mp3");
 const MESSAGE_TYPE = {
   INVALID: "Please, enter a valid number!",
   REPEATED: "You already tried with that number!",
-  GUESSED: "Yes! You guessed! 😁",
+  GUESSED: "Yes! You guessed it! 😁",
   ALMOST_THERE: "Almost there!",
-  SO_CLOSE: "So close!",
+  VERY_CLOSE: "Very close!",
   CLOSE: "Close!",
   FAR_AWAY: "Far away!",
   GAME_OVER: "Game over 😥 The number was ",
@@ -34,7 +34,7 @@ const COLORS = {
   INVALID: "#aaaaaa",
   GUESSED: "#95f480",
   ALMOST_THERE: "#fe5100",
-  SO_CLOSE: "#ff5c5c",
+  VERY_CLOSE: "#ff5c5c",
   CLOSE: "#f48585",
   FAR_AWAY: "#4d88ff",
   GAME_OVER: "#acacac",
@@ -42,8 +42,8 @@ const COLORS = {
 };
 
 //STARTING THE GAME
-let triesLeft = 15;
-let maxNumber = 100;
+let triesLeft = 10;
+let maxNumber = 50;
 let level = 1;
 
 newLevel(triesLeft, maxNumber, level);
@@ -81,12 +81,12 @@ function nextLevel() {
   if (level == 1) {
     lvlPassed = false;
     triesLeft = 10;
-    maxNumber = 50;
+    maxNumber = 100;
     level = 2;
     newLevel(triesLeft, maxNumber, level);
   } else if (level == 2) {
     lvlPassed = false;
-    triesLeft = 2;
+    triesLeft = 3;
     maxNumber = 10;
     level = 3;
     RESULT.HIDDEN = true;
@@ -135,8 +135,8 @@ function checkingNumber() {
     triesLeft--;
     TRIES.textContent = triesLeft;
   } else if (Math.abs(toGuess - Number(USER_INPUT.value)) <= 5) {
-    RESULT.textContent = MESSAGE_TYPE.SO_CLOSE;
-    RESULT.style.background = COLORS.SO_CLOSE;
+    RESULT.textContent = MESSAGE_TYPE.VERY_CLOSE;
+    RESULT.style.background = COLORS.VERY_CLOSE;
     userNumbers.push(Number(USER_INPUT.value));
     triesLeft--;
     TRIES.textContent = triesLeft;
