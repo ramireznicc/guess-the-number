@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number | by ramireznicc</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-zero">
+        <div class="help-dropdown">
+          <span id="help">help?</span>
+          <ul id="tricks-card">
+            <li><span id="far-away">FAR AWAY</span> diference > 10</li>
+            <li><span id="close">CLOSE</span> diference <= 10</li>
+            <li><span id="so-close">SO CLOSE</span> diference <= 5</li>
+            <li><span id="almost-there">ALMOST THERE</span> diference = 1</li>
+            <li><span>no help in level 3</span></li>
+          </ul>
+        </div>
+        <h4>level <span class="bold" id="lvl-num">1</span></h4>
+        <h1>Guess the Number</h1>
+        <h2>the game</h2>
+      </div>
+      <div class="container-one">
+        <p>
+          I am thinking in a number between <span class="bold">1</span> and
+          <span id="max-num" class="bold">100</span>
+        </p>
+        <p>
+          Let's see if you can guess it in less than
+          <span id="tries" class="bold">10</span> tries
+        </p>
+      </div>
+      <div class="container-two">
+        <span id="result" class="bold"> result </span>
+        <input id="user-input" type="text" placeholder="enter a number" />
+      </div>
+      <div>
+        <button id="btn-next-level">next level</button>
+        <button id="btn-new-game">new game</button>
+        <button id="btn-submit">submit</button>
+        <span id="congrats">congratulations! You won the game! 🥳</span>
+      </div>
+    </div>
+    <footer>
+      developed by
+      <a href="https://github.com/ramireznicc">Nicolás Ramirez</a>
+    </footer>
+    <!-- JS -->
+    <script src="main.js"></script>
+  </body>
+</html>

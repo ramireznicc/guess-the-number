@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Prompt", sans-serif;
+  text-transform: uppercase;
+  cursor: default;
+  user-select: none;
+}
+
+:root {
+  --seven: #2e3440ff;
+  --six: #3b4252ff;
+  --five: #434c5eff;
+  --four: #545e73;
+  --three: #d8dee9ff;
+  --two: #e5e9f0ff;
+  --one: #eceff4ff;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: var(--four);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px 40px 120px;
+  align-items: end;
+  background-color: var(--three);
+  gap: 20px;
+  border-radius: 18px;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container-zero {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.help-dropdown {
+  position: relative;
+}
+
+#help {
+  font-size: 0.8rem;
+  color: var(--four);
+  opacity: 0.5;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+#help:hover {
+  opacity: 1;
+}
+
+#help:hover + #tricks-card {
+  display: block;
+}
+
+#tricks-card {
+  text-align: center;
+  background-color: var(--five);
+  color: var(--three);
+  border-radius: 18px;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  line-height: 40px;
+  display: none;
+  letter-spacing: 2px;
+  width: 400px;
+  animation: horizontal-shaking 1s;
+  position: absolute;
+  right: 0;
+}
+
+ul li span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#far-away {
+  color: #4d88ff;
+}
+
+#close {
+  color: #f48585;
+}
+
+#so-close {
+  color: #ff5c5c;
+}
+
+#almost-there {
+  color: #fe5100;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: var(--five);
+  letter-spacing: 4px;
+}
+
+h1 {
+  color: var(--seven);
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 90px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  letter-spacing: 5px;
+}
+
+h2 {
+  color: var(--five);
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  letter-spacing: 12px;
+}
+
+.container-one {
+  text-align: end;
+  font-size: 1.5rem;
+  color: var(--four);
+  letter-spacing: 2.5px;
+  vertical-align: middle;
+  line-height: 35px;
+}
+
+.bold {
+  font-weight: 700;
+  color: var(--seven);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.container-two {
+  display: flex;
+  align-items: baseline;
+}
+
+#result {
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  margin: 0px 15px;
+  line-height: 50px;
+  border-radius: 12px;
+  padding: 0px 10px;
+  animation: horizontal-shaking 2s infinite;
+}
+
+input {
+  cursor: auto;
+  color: var(--four);
+  background-color: var(--one);
+  border: none;
+  border-radius: 12px;
+  width: 200px;
+  height: 50px;
+  padding: 0px 5px;
+  font-size: 1.5rem;
+  text-align: end;
+  letter-spacing: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  letter-spacing: 1.3px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--five);
+  color: var(--one);
+  font-size: 1.4rem;
+  letter-spacing: 8px;
+  transition: all 0.3s;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: var(--six);
+}
+
+#btn-new-game {
+  letter-spacing: 6px;
+}
+
+#btn-next-level {
+  letter-spacing: 4px;
+}
+
+footer {
+  text-transform: lowercase;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 5px 10px;
+  margin: 30px 0;
+  position: relative;
+  bottom: 0;
+}
+
+footer a {
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#congrats {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--six);
+}
